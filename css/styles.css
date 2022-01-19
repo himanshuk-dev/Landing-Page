@@ -19,12 +19,13 @@ html {
 } /* Box model fix */
 
 body{
-color: #00120B;
-margin:  0;
-padding: 0;
-font-family: 'Montserrat', sans-serif;
-font-size: 15px;
-line-height: 1.5;
+	background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(254,201,39,1) 15%, rgba(31,77,4,1) 100%);
+	margin:  0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
 }
 img{
 width: 300px;
@@ -72,27 +73,62 @@ h3 {
 	border-bottom: none;
 }
 
-/*Profile
-----------------------------------*/
-header {
-	background-color: #96ADC8;
+/* Navigation menu
+----------------------------------- */
+.navbar_menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar_menu li {
+    display: inline-block;
+}
+
+.navbar_menu .menu_link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar_menu .menu_link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+#navbar_list {
+    background: #1B2021;
+}
+
+.nav_hyperlink {
+	color: white;
+}
+
+.navbar_list_item {
+    margin: 1rem;
 }
 
 
+/* profile
+---------------------------------- */
+#profile{
+
+}
 
 /*Projects
 ----------------------------------*/
-.projects {
-	background: #F5F5F5;
-}
-.projects .button {
+
+#projects .button {
 	color: #F5F5F5;
 	background: #00120B;
 	padding: 8px;
 	border-radius: 4px;
 	display:  inline-block;
 }
-.projects .button:hover{
+#projects .button:hover{
 
 	background: rgba(0, 18, 11, 70%);
 }
@@ -106,32 +142,26 @@ header {
 
 /*Work experience
 ----------------------------------*/
-.work-experience {
-	background:  #D5A021;
-}
-.work-experience a{
+#work-experience a{
 	color: #00120B;
 }
 
 /*Education
 ----------------------------------*/
-.Education {
-	background-image: url(../images/sharon-mccutcheon-unsplash.jpg);
-	background-size: cover;
-	background-position: top right;
+#Education {
 	padding-bottom: 100px;
 }
-.education p {
+#Education p {
 	width:  60%;
 }
 
 /*Contact Info
 ----------------------------------*/
 
-Footer {
-	background: #00120B ;
+#contact {
 	color: #F5F5F5;
 }
+
 .contact-list {
 	list-style-type: none;
 	padding: 0;
@@ -140,6 +170,126 @@ Footer {
 	padding: 15px;
 	display: inline-block;
 }
+
+/* Active section 
+--------------------------------- */
+section.your-active-class {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.your-active-class .container::before {
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+section.active {
+	background: rgb(6,194,238);
+background: linear-gradient(0deg, rgba(6,194,238,1) 0%, rgba(149,218,217,1) 100%);
+}
+
+.active-nav {
+    color: red;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}
+
+/* Container style
+--------------------------------- */
+.container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right; 
+}
+
+
+/* Background circles
+---------------------------------- */
+section:nth-of-type(odd) .container::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
 /*Responsive
 ----------------------------------*/
 @media screen and (min-width: 750px){
