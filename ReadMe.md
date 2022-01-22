@@ -1,4 +1,4 @@
-# Project Title
+# Landing Page
 
 I developed this project as part of Udacity nano-degree program.
 
