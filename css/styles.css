@@ -68,7 +68,6 @@ h3 {
 
 .navbar_menu{
 	position: fixed;
-	text-align: right;
 }
 .navbar_menu ul {
     padding-left: 0;
@@ -221,7 +220,7 @@ section:nth-of-type(even) .container {
   }
   
   #myBtn:hover {
-	background-color: #555;
+	background-color: black;
   }
 
 /*Responsive
