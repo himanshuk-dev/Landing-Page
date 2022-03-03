@@ -1,3 +1,13 @@
+/*
+COLOR PALATTE
+#00120B - Dark jungle green
+#D8E4FF - Periwinkle crayola
+#96ADC8 - Cadet blue crayola
+#D5A021 - Goldenrod
+#F5F5F5 - cultured
+*/
+
+
 
 /*Global styles
 ----------------------------------*/
@@ -9,13 +19,12 @@ html {
 } /* Box model fix */
 
 body{
-	background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(254,201,39,1) 15%, rgba(31,77,4,1) 100%);
-	margin:  0;
-	padding: 0;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
-	line-height: 1.5;
+color: #00120B;
+margin:  0;
+padding: 0;
+font-family: 'Montserrat', sans-serif;
+font-size: 15px;
+line-height: 1.5;
 }
 img{
 width: 300px;
@@ -63,44 +72,48 @@ h3 {
 	border-bottom: none;
 }
 
-/* Navigation menu
------------------------------------ */
+/* Navigation Menu
+----------------------------- */
 
-.navbar_menu{
+/* nav{
 	position: fixed;
+	margin: 1rem;
 }
-.navbar_menu ul {
+nav ul {
     padding-left: 0;
     margin: 0;
 	text-align: right;
 }
 
-.navbar_menu li {
+nav li {
     display: inline-block;
 }
 
 
-#navbar_list {
+nav {
     background: #1B2021;
-}
+} */
 
-
-.navbar_list_item {
-    margin: 1rem;
+/*Profile
+----------------------------------*/
+.header {
+	background-color: #96ADC8;
 }
 
 
 /*Projects
 ----------------------------------*/
-
-#projects .button {
+.projects {
+	background: #F5F5F5;
+}
+.projects .button {
 	color: #F5F5F5;
 	background: #00120B;
 	padding: 8px;
 	border-radius: 4px;
 	display:  inline-block;
 }
-#projects .button:hover{
+.projects .button:hover{
 
 	background: rgba(0, 18, 11, 70%);
 }
@@ -114,26 +127,32 @@ h3 {
 
 /*Work experience
 ----------------------------------*/
-#work-experience a{
+.work-experience {
+	background:  #D5A021;
+}
+.work-experience a{
 	color: #00120B;
 }
 
 /*Education
 ----------------------------------*/
-#Education {
+.Education {
+	background-image: url(../images/sharon-mccutcheon-unsplash.jpg);
+	background-size: cover;
+	background-position: top right;
 	padding-bottom: 100px;
 }
-#Education p {
+.education p {
 	width:  60%;
 }
 
 /*Contact Info
 ----------------------------------*/
 
-#contact {
+.footer {
+	background: #00120B ;
 	color: #F5F5F5;
 }
-
 .contact-list {
 	list-style-type: none;
 	padding: 0;
@@ -143,90 +162,11 @@ h3 {
 	display: inline-block;
 }
 
-/* Active section 
---------------------------------- */
-section.your-active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-section.your-active-class .container::before {
-    opacity: 1;
-    animation: rotate 4s linear 0s infinite forwards;
-}
-
-section.your-active-class .container::after {
-    opacity: 1;
-    animation: rotate 5s linear 0s infinite forwards reverse;
-}
-
-section.active {
-	background: #3A5A40;
-}
-
-.active-nav {
-    color: red;
-}
-
-@keyframes rotate {
-	from {
-		transform: rotate(0deg)
-		           translate(-1em)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-1em) 
-		           rotate(-360deg);
-	}
-}
-
-/* Container style
---------------------------------- */
-.container {
-    padding: 1em;
-    text-align: left;
-}
-
-@media only screen and (min-width: 35em){
-    .container {
-        max-width: 50em;
-        padding: 4em;
-    }
-}
-
-section:nth-of-type(even) .container {
-    margin-right: 0;
-    margin-left: auto;
-    text-align: right; 
-}
-
-/* Scroll to top button
------------------------------------*/
-#myBtn {
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	right: 30px;
-	z-index: 99;
-	font-size: 18px;
-	border: none;
-	outline: none;
-	background-color: red;
-	color: white;
-	cursor: pointer;
-	padding: 15px;
-	border-radius: 4px;
-  }
-  
-  #myBtn:hover {
-	background-color: black;
-  }
 
 /*Responsive
 ----------------------------------*/
 @media screen and (min-width: 750px){
-	header, footer {
+	.header, .footer {
 		text-align: center;
 	}
 	.project-item img {
