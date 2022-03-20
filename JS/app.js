@@ -49,9 +49,32 @@ function activeClass() {
     }
 }
 
+// Function call to show active section in view
 document.addEventListener("scroll", function() {
     activeClass();
   });
 
 // Scroll to anchor ID using scrollTO event
 
+
+// Scroll to top button
+
+//Get the button:
+button = document.getElementById("scrollbutton");
+
+// Show the button 30px down from top of viewport
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+}
+
+//Scroll function
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
