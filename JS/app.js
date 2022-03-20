@@ -29,7 +29,7 @@ addItem();
 // Check the section in view
 
 function sectionInView () {
-    let position = element.getBoundingClientRect();
+    const position = element.getBoundingClientRect();
     return (position.top <= 150 && position.bottom >= 150);
 }
 
@@ -40,6 +40,7 @@ function activeClass() {
 
             // Add "active-class" to section in view port
             section.classList.add("active-class");
+            
         } else {
 
             // Remove "active-class" from section not in view port
@@ -48,9 +49,9 @@ function activeClass() {
     }
 }
 
-
 document.addEventListener("scroll", function() {
     activeClass();
   });
+
 // Scroll to anchor ID using scrollTO event
 
