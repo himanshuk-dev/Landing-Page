@@ -1,18 +1,14 @@
 
 //Global variables
-let sections = document.querySelectorAll('section');
-const menu = document.getElementsByTagName('ul');
+const sections = document.querySelectorAll('section');
+const menu = document.getElementsByTagName('ul')[0];
 
-// Helper Functions
-
-
-// Main functions
 
 // build the navigation menu
 
 function addItem() {
 
-    for (let section of sections) {
+    for (section of sections) {
 
         // Create list item under unordered list for navingation bar
         const navItem = document.createElement("li");
@@ -21,27 +17,40 @@ function addItem() {
         let itemName = section.getAttribute('data-nav');
         // Store link to navigation item
         let itemLink = section.getAttribute('id');
-        navItem.classList.add("nav");
-        navItem.innerHTML = `<a href= "#${itemLink}" >${itemName}</a>`;
+        menu.classList.add("nav");
+        navItem.innerHTML = `<a href= "#${itemLink}">${itemName}</a>`;
         menu.appendChild(navItem);
     }
 }
 
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
+addItem();
 
 
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
+// Check the section in view
 
-// Build menu 
-
-// Scroll to section on link click
+function sectionInView () {
+    let position = element.getBoundingClientRect();
+    return (position.top <= 150 && position.bottom >= 150);
+}
 
 // Set sections as active
+function activeClass() {
+    for (section of sections) {
+        if (sectionInView(section)) {
+
+            // Add "active-class" to section in view port
+            section.classList.add("active-class");
+        } else {
+
+            // Remove "active-class" from section not in view port
+            section.classList.remove("active-class");
+        }
+    }
+}
+
+
+document.addEventListener("scroll", function() {
+    activeClass();
+  });
+// Scroll to anchor ID using scrollTO event
+

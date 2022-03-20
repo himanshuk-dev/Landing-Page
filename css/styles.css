@@ -1,14 +1,3 @@
-/*
-COLOR PALATTE
-#00120B - Dark jungle green
-#D8E4FF - Periwinkle crayola
-#96ADC8 - Cadet blue crayola
-#D5A021 - Goldenrod
-#F5F5F5 - cultured
-*/
-
-
-
 /*Global styles
 ----------------------------------*/
 html {
@@ -75,28 +64,31 @@ h3 {
 /* Navigation Menu
 ----------------------------- */
 
-/* nav{
-	position: fixed;
-	margin: 1rem;
-}
-nav ul {
-    padding-left: 0;
-    margin: 0;
-	text-align: right;
-}
-
-nav li {
-    display: inline-block;
-}
-
-
-nav {
-    background: #1B2021;
-} */
+ .nav{
+	background-color: #00120B;
+	font-size: 29px;
+	padding: 30px;
+	width: 384px;
+	flex-wrap: no-wrap;
+  }
+  
+  .nav a{
+	text-decoration: none;
+	color: #FEFAE0;
+	font-size: 29px;
+	padding: 20px;
+  }
+  
+  .nav a:active{
+	color: red;
+	background-color: #F2E6FA;
+	padding: 9px;
+  } 
 
 /*Profile
 ----------------------------------*/
 .header {
+	padding: 2%;
 	background-color: #96ADC8;
 }
 
@@ -111,7 +103,7 @@ nav {
 	background: #00120B;
 	padding: 8px;
 	border-radius: 4px;
-	display:  inline-block;
+	display: inline;
 }
 .projects .button:hover{
 
@@ -162,6 +154,12 @@ nav {
 	display: inline-block;
 }
 
+/* SectionInView
+-----------------------------------*/
+.active-class{
+	background: #EBB3A9;
+}
+
 
 /*Responsive
 ----------------------------------*/
@@ -182,6 +180,28 @@ nav {
 		display: flex;
 		justify-content: center;
 	}
+	.nav{
+		display: flex;
+		justify-content: space-evenly;
+		background: #00120B;
+		width: 1320px;
+		font-size: 29px;
+		padding: 2%;
+	}
+	
+	.nav a:hover{
+		text-decoration: none;
+	  	color: black;
+	  	background-color: white;
+	  	padding: 20px;
+	}
+	
+	.nav a:active{
+		/* text-decoration: none; */
+	  	color: red;
+	  	background-color: white;
+	  	padding: 20px;
+	}
 }
 @media screen and (max-width: 749px){
 	h1{
@@ -194,5 +214,25 @@ nav {
 	}
 	.contact-list a{
 		padding: 5px;
+	}
+	.nav{
+		background: #00120B;
+		width: 1320px;
+		font-size: 29px;
+		padding: 2%;
+	}
+	
+	.nav a:hover{
+		text-decoration: none;
+	  	color: black;
+	  	background-color: white;
+	  	padding: 5px;
+	}
+	
+	.nav a:active{
+		/* text-decoration: none; */
+	  	color: red;
+	  	background-color: white;
+	  	padding: 20px;
 	}
 }
