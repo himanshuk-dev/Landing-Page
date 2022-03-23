@@ -3,7 +3,6 @@
 const sections = document.querySelectorAll('section');
 const menu = document.getElementsByTagName('ul')[0];
 
-
 // build the navigation menu
 
 function addItem() {
@@ -28,7 +27,7 @@ addItem();
 
 // Check the section in view
 
-function sectionInView () {
+function sectionInView (element) {
     const position = element.getBoundingClientRect();
     return (position.top <= 150 && position.bottom >= 150);
 }
@@ -40,6 +39,7 @@ function activeClass() {
 
             // Add "active-class" to section in view port
             section.classList.add("active-class");
+            
             
         } else {
 
@@ -54,8 +54,6 @@ document.addEventListener("scroll", function() {
     activeClass();
   });
 
-// Scroll to anchor ID using scrollTO event
-
 
 // Scroll to top button
 
@@ -66,7 +64,7 @@ button = document.getElementById("scrollbutton");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     button.style.display = "block";
   } else {
     button.style.display = "none";
