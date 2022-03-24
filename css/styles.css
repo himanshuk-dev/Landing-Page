@@ -5,7 +5,7 @@ html {
   	scroll-behavior: smooth;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  	box-sizing: inherit;
 } /* Box model fix */
 
 body{
@@ -137,9 +137,12 @@ h3 {
 /* SectionInView
 -----------------------------------*/
 .active-class{
-	background: #EBB3A9;
+	/* background: #EBB3A9; */
+	background: rgb(241,230,235);
+	background: radial-gradient(circle, rgba(241,230,235,1) 0%, rgba(245,220,241,1) 100%);
 	width: 99%;
-	align-content: center;
+	padding-left: 1em;
+	align-items: center;
 }
 
 /* Scroll to top button
