@@ -24,12 +24,11 @@ function addItem() {
 
 addItem();
 
-
 // Check the section in view
 
 function sectionInView (element) {
     const position = element.getBoundingClientRect();
-    return (position.top <= 150 && position.bottom >= 150);
+    return (position.top <= 250 && position.bottom >= 250);
 }
 
 // Set sections as active
