@@ -28,7 +28,7 @@ addItem();
 
 function sectionInView (element) {
     const position = element.getBoundingClientRect();
-    return (position.top <= 250 && position.bottom >= 250);
+    return (position.top <= 100 && position.bottom >= 100);
 }
 
 // Set sections as active
@@ -38,8 +38,6 @@ function activeClass() {
 
             // Add "active-class" to section in view port
             section.classList.add("active-class");
-            
-            
         } else {
 
             // Remove "active-class" from section not in view port
@@ -63,7 +61,7 @@ button = document.getElementById("scrollbutton");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
     button.style.display = "block";
   } else {
     button.style.display = "none";

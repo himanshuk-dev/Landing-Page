@@ -141,8 +141,15 @@ h3 {
 	background: rgb(241,230,235);
 	background: radial-gradient(circle, rgba(241,230,235,1) 0%, rgba(245,220,241,1) 100%);
 	width: 99%;
-	padding-left: 1em;
+	margin-left: 0.5em;
 	align-items: center;
+}
+
+.active{
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	padding: 5px;
 }
 
 /* Scroll to top button
@@ -171,7 +178,9 @@ h3 {
 
 /*Responsive
 ----------------------------------*/
-@media screen and (min-width: 750px){
+
+/* Large screens-------------------- */
+@media screen and (min-width: 1000px){
 	.header, .footer {
 		text-align: center;
 	}
@@ -183,10 +192,6 @@ h3 {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		column-gap: 20px;  /* gutter space */
-	}
-	.contact-list{
-		display: flex;
-		justify-content: center;
 	}
 	.nav{
 		display: flex;
@@ -211,7 +216,10 @@ h3 {
 	  	padding: 20px;
 	}
 }
-@media screen and (max-width: 749px){
+
+/* Small screens----------------- */
+@media screen and (min-width:300px) and (max-width:1000px){
+	
 	h1{
 		font-size:  75px;
 		line-height: 0.9;
@@ -220,12 +228,11 @@ h3 {
 	h2{
 		line-height: 1;
 	}
-	.contact-list a{
-		padding: 5px;
-	}
 	.nav{
-		background: #00120B;
-		width: 1320px;
+		background-color: #00120B;
+		background-size: inherit;
+		text-align: center;
+		width: inherit;
 		font-size: 29px;
 		padding: 2%;
 	}
