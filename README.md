@@ -23,11 +23,17 @@ Any Operating system Any browser Code editor
 
 **Desktop View:**
 
-https://user-images.githubusercontent.com/87880250/160262689-1fa8d3b1-5dc6-4240-b6cd-2603b6cce689.mp4
+
+https://user-images.githubusercontent.com/87880250/160698634-cce4d22e-9787-44cf-bba2-d877e05e588a.mp4
+
 
 **Mobile View:**
 
-https://user-images.githubusercontent.com/87880250/160256510-ae825b5b-1d3d-424b-884d-c75aea828f72.mp4
+
+
+https://user-images.githubusercontent.com/87880250/160697515-1bdf1b48-f819-4cbf-9460-1bdde3d48769.mp4
+
+
 
 # Table of contents
 
