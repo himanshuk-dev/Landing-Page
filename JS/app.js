@@ -23,6 +23,7 @@ function addItem() {
         menu.classList.add("nav");
         navItem.innerHTML = `<a href= "#${itemLink}" class=section >${itemName}</a>`;
         menu.appendChild(navItem);
+        scroll(navItem,section);
         
     }
 }
@@ -62,11 +63,12 @@ document.addEventListener("scroll", function() {
   });
 
 // Smooth scroll
-let element = document.getElementsByClassName("nav");
-element.addEventListener("click", function(event){
-  event.preventDefault();
-  element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-})
+function scroll(clickedElement, scrolledElement) {
+  clickedElement.addEventListener("click", function (e) {
+    e.preventDefault();
+    scrolledElement.scrollIntoView({ behavior: "smooth" });
+  });
+}
 
 // Scroll to top button
 
