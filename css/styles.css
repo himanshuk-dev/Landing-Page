@@ -2,7 +2,6 @@
 ----------------------------------*/
 html {
   	box-sizing: border-box;
-  	scroll-behavior: smooth;
 }
 *, *:before, *:after {
   	box-sizing: inherit;
@@ -146,10 +145,7 @@ h3 {
 }
 
 .active{
-	text-decoration: none;
-	color: black;
-	background-color: white;
-	padding: 5px;
+	background-color: #D5A021;
 }
 
 /* Scroll to top button
@@ -168,7 +164,6 @@ h3 {
 	border-radius: 10px;
 	background-color: #DD4B1A; 
 	color: white;
-	
   }
   
   #scrollbutton:hover {
@@ -183,6 +178,7 @@ h3 {
 @media screen and (min-width: 1000px){
 	.header, .footer {
 		text-align: center;
+		padding-top: 5%;
 	}
 	.project-item img {
 		float:  left;
@@ -195,6 +191,8 @@ h3 {
 	}
 	.nav{
 		display: flex;
+		position: fixed;
+		margin-top: 0%;
 		justify-content: space-evenly;
 		background: #00120B;
 		width: 1320px;
@@ -215,11 +213,17 @@ h3 {
 	  	background-color: white;
 	  	padding: 20px;
 	}
+	.active{
+		background-color: #D5A021;
+	}
 }
 
 /* Small screens----------------- */
 @media screen and (min-width:300px) and (max-width:1000px){
 	
+	.header{
+		padding-top: 50%;
+	}
 	h1{
 		font-size:  75px;
 		line-height: 0.9;
@@ -231,17 +235,22 @@ h3 {
 	.nav{
 		background-color: #00120B;
 		background-size: inherit;
+		position: fixed;
+		margin-top: 0%;
 		text-align: center;
 		width: inherit;
-		font-size: 29px;
-		padding: 2%;
+		font-size: x-small;
+		padding: 9%;
+	}
+	.nav a{
+		padding: 10px;
 	}
 	
 	.nav a:hover{
 		text-decoration: none;
 	  	color: black;
 	  	background-color: white;
-	  	padding: 5px;
+	  	padding: 2px;
 	}
 	
 	.nav a:active{
@@ -249,5 +258,10 @@ h3 {
 	  	color: red;
 	  	background-color: white;
 	  	padding: 20px;
+	}
+
+	.active{
+		background-color: #D5A021;
+		padding: 0%;
 	}
 }

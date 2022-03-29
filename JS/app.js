@@ -2,6 +2,9 @@
 //Global variables
 const sections = document.querySelectorAll('section');
 const menu = document.getElementsByTagName('ul')[0];
+// const navLink = menu.getElementsByTagName('li');
+
+// console.log("list of navlink:",navLink);
 
 // build the navigation menu
 
@@ -10,38 +13,45 @@ function addItem() {
     for (section of sections) {
 
         // Create list item under unordered list for navingation bar
-        const navItem = document.createElement("li");
+        const navItem = document.createElement("li");      
         
-        // Store name of navigation item
+        // // Store name of navigation item
         let itemName = section.getAttribute('data-nav');
-        // Store link to navigation item
+        
+        // // Store link to navigation item
         let itemLink = section.getAttribute('id');
         menu.classList.add("nav");
-        navItem.innerHTML = `<a href= "#${itemLink}">${itemName}</a>`;
+        navItem.innerHTML = `<a href= "#${itemLink}" class=section >${itemName}</a>`;
         menu.appendChild(navItem);
+        
     }
 }
 
 addItem();
 
+// Active nav links
+// navLink.classList.add("navActive");
+
 // Check the section in view
 
 function sectionInView (element) {
     const position = element.getBoundingClientRect();
-    return (position.top <= 100 && position.bottom >= 100);
+    return (position.top <= 150 && position.bottom >= 150);
 }
 
-// Set sections as active
+// Add active state to section and nav element
 function activeClass() {
+
     for (section of sections) {
         if (sectionInView(section)) {
-
             // Add "active-class" to section in view port
             section.classList.add("active-class");
+            document.querySelector(`a[href='#${section.id}']`).classList.add("active");
         } else {
 
             // Remove "active-class" from section not in view port
             section.classList.remove("active-class");
+            document.querySelector(`a[href='#${section.id}']`).classList.remove("active");
         }
     }
 }
@@ -51,6 +61,12 @@ document.addEventListener("scroll", function() {
     activeClass();
   });
 
+// Smooth scroll
+let element = document.getElementsByClassName("nav");
+element.addEventListener("click", function(event){
+  event.preventDefault();
+  element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+})
 
 // Scroll to top button
 
