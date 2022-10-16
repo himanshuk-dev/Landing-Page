@@ -21,6 +21,9 @@ Any Operating system Any browser Code editor
 
 # Demo-preview
 
+
+Review this project directly on Github pages [here](https://himanshukumar30.github.io/Landing-Page/)
+
 **Desktop View:**
 
 
